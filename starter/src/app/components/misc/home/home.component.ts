@@ -18,8 +18,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.movies=movies;
-    this.movies=this.movieService.listMovies();
+    this.movies=this.movieService.getMovies();
   }
   showMovie(id:number):void{
     this.router.navigate(['/movies',id]);

@@ -8,7 +8,11 @@ export class MovieService {
 
   constructor() { }
 
-  listMovies(): Array<Movie> {
+  getMovies(): Array<Movie> {
     return this.movies;
+  }
+
+  getMovie(id:number):Movie{
+    return this.movies.find(movie => movie.id === id);
   }
 }

@@ -11,7 +11,7 @@ import { movies } from '../../../shared/data/sample-movies';
 })
 export class MovieItemComponent implements OnInit {
   movie:Movie;
-  movies:Array<Movie>=movies;
+  // movies:Array<Movie>=[movies];
 
   constructor(
     private routes: ActivatedRoute,
@@ -20,10 +20,8 @@ export class MovieItemComponent implements OnInit {
 
   ngOnInit():void {
     this.routes.params.subscribe(params => {
-      this.movie = this.movies.find(movie => movie.id === Number(params['id']));
+      this.movie = this.movieService.getMovie(Number(params['id']));
     });
-    // return this.movies;
-    // return this.movies.find(contact => contact.id === id);
   }
 
 }
