@@ -10,7 +10,7 @@
     <tr *ngFor="let movie of movies">
       <td>Room {{ movie.id }}</td>
       <td>{{ movie.title }}</td>
-      <td><button (click)="showContactDetails(movie.id)">Details</button></td>
+      <td><button (click)="showMovie(movie.id)">Details</button></td>
     </tr>
   </tbody>
 </table>
