@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/misc/home/home.component';
 import { MovieComponent } from './components/misc/movie/movie.component';
-
+import { routes } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import { MovieComponent } from './components/misc/movie/movie.component';
     MovieComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

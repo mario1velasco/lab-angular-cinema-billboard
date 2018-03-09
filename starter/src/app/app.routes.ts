@@ -1,12 +1,6 @@
-import {
-  MovieComponent
-} from './components/misc/movie/movie.component';
-import {
-  HomeComponent
-} from './components/misc/home/home.component';
-import {
-  Routes
-} from '@angular/router';
+import {  MovieComponent} from './components/misc/movie/movie.component';
+import {  HomeComponent} from './components/misc/home/home.component';
+import {  Routes} from '@angular/router';
 
 export const routes: Routes = [{
     path: '',
@@ -18,7 +12,7 @@ export const routes: Routes = [{
     component: HomeComponent
   },
   {
-    path: 'about',
+    path: 'movie',
     component: MovieComponent
   }
 ];
