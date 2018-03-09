@@ -1,7 +1,64 @@
-<p>
-  movie-item works!
-</p>
-<!-- <tr *ngFor="let movie of movies"> -->
-  <h3>({{ movie?.id }}) - {{ movie?.title }}</h3>
-<!-- </tr> -->
+<div class="container">
+  <div class="row">
+    <div class="col s12 hoverable">
 
+      <div class="col s12">
+        <h4>
+          <strong>Room {{ movie.id }}: </strong>{{movie.title}}
+        </h4>
+      </div>
+      <div class="col s6">
+        <a (click)="showMovie(movie.id)">
+          <img class="responsive-img hoverable" src="{{ movie.poster }}" alt="">
+        </a>
+      </div>
+      <div class="col s6">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <strong>Genres</strong>
+              </td>
+              <td>
+                <p *ngFor="let genre of movie.genres">{{genre}}</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Year</strong>
+              </td>
+              <td>{{ movie.year}}</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Director</strong>
+              </td>
+              <td>{{ movie.director}}</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Actors</strong>
+              </td>
+              <td>
+                <p *ngFor="let actor of movie.actors">{{actor}}</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Synoposis</strong>
+              </td>
+              <td>{{ movie.synopsis}}</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Director</strong>
+              </td>
+              <td>Lollipop</td>
+            </tr>
+          </tbody>
+        </table>
+        <a class="waves-effect waves-light btn" [routerLink]="['/home']">Home</a>
+      </div>
+    </div>
+  </div>
+</div>
