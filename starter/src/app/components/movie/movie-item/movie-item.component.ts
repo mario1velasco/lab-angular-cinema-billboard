@@ -17,6 +17,9 @@ export class MovieItemComponent implements OnInit {
   ) {   }
 
   ngOnInit() {
+    this.routes.params.subscribe(params => {
+      this.movie = this.movies.find(movie => movie.id === Number(params['id']));
+    });
     // return this.movies;
     // return this.movies.find(contact => contact.id === id);
   }
