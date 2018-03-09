@@ -1,4 +1,7 @@
-[
+import { Movie } from './../models/movie.model';
+
+
+export const movies: Array<Movie>=[
   {
     id: 1,
     title: "The Shawshank Redemption",
