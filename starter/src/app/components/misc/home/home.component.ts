@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
     this.movies=movies;
   }
   showMovie(id:number):void{
-    this.router.navigate(['/movie']);
+    this.router.navigate(['/movies',id]);
   }
 
 }
