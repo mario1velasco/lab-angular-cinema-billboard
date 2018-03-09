@@ -7,10 +7,7 @@ import { movies } from '../../../shared/data/sample-movies';
 @Component({
   selector: 'app-movie-item',
   templateUrl: './movie-item.component.html',
-  styleUrls: ['./movie-item.component.css'],
-  providers: [
-    MovieService
-  ]
+  styleUrls: ['./movie-item.component.css']
 })
 export class MovieItemComponent implements OnInit {
   movie:Movie;
@@ -29,7 +26,4 @@ export class MovieItemComponent implements OnInit {
     // return this.movies.find(contact => contact.id === id);
   }
 
-  incrment():void{
-    this.movieService.inc();
-  }
 }

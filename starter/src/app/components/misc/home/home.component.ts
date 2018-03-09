@@ -1,3 +1,4 @@
+import { MovieService } from './../../../shared/services/movie.service';
 import { movies } from './../../../shared/data/sample-movies';
 import { Movie } from './../../../shared/models/movie.model';
 import { Component, OnInit } from '@angular/core';
@@ -12,11 +13,13 @@ export class HomeComponent implements OnInit {
   movies:Array<Movie>=[];
 
   constructor(
-    private router:Router
+    private router:Router,
+    private movieService:MovieService
   ) { }
 
   ngOnInit() {
-    this.movies=movies;
+    // this.movies=movies;
+    this.movies=this.movieService.listMovies();
   }
   showMovie(id:number):void{
     this.router.navigate(['/movies',id]);

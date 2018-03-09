@@ -1,3 +1,4 @@
+import { MovieService } from './shared/services/movie.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -19,7 +20,7 @@ import { MovieItemComponent } from './components/movie/movie-item/movie-item.com
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
